@@ -1,0 +1,32 @@
+.section
+{
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 1000px;
+}
+.contain
+{
+    width: 1000px;
+    height: 1000px;
+    display: grid;
+}
+.buttons {
+    
+    right: 600px;
+    display: flex;
+    justify-content: safe;
+}
+.btn{
+    padding: 1em 3em;
+    order: 1;
+    border: none;
+    outline: none;
+    font-weight: bold;
+}
+#colorpiker
+{
+    height: 20px;
+}
