@@ -1,9 +1,10 @@
 const contain = document.querySelector('.contain');
 const piker = document.createElement('INPUT');
-piker.setAttribute("type","color")
+piker.setAttribute('type','color','onclick="colorpiker()"')
+piker.className='copiker';
 const size = document.createElement('button');
 const eraz = document.createElement('button');
-const buttonContain = document.querySelector('.buttons')
+const buttonContain = document.querySelector('.buttons');
 
 function createdivs(col , rows)
 {
@@ -18,40 +19,22 @@ function createdivs(col , rows)
 }
 createdivs(24,24)
 
-function colorpiker()
+ function colorpiker()
 {
-    const boxs = contain.querySelectorAll(".box")
-    piker.textContent = 'COLOR PIKER'
-    piker.addEventListener('click' , ()=>
-    {
-       boxs.forEach(box=>box.addEventListener('mouseover',()=>
-       {
-            let R = Math.floor(Math.random()*256)
-            let G = Math.floor(Math.random()*256)
-            let B = Math.floor(Math.random()*256)
-            box.style.background = `rgb(${R},${G},${B})`;
+    const boxs = contain.querySelectorAll('.box')
+    piker.addEventListener('click' ,() => {
+        boxs.forEach(box => box.addEventListener('mouseover', () => {
+            let R = Math.floor(Math.random('copiker') * 380);
+            let G = Math.floor(Math.random('copiker') * 0);
+            let B = Math.floor(Math.random('copiker') * 0);
+            let RGB = `rgb(${R},${G},${B})`;
             box.style.background = RGB;
-       }))
-        
+        }))
     })
-    buttonContain.appendChild(piker).classList.add('INPUT')
+    buttonContain.appendChild(piker).classList.add('copiker')
 }
 colorpiker()
 
-// function colorpiker()
-// {
-// const ros = document.querySelectorAll(".box");
-
-// piker.addEventListener('click' , ()=>
-// {
-//   ros.forEach(box=>box.addEventListener('mouseover',()=>
-//   {
-//     ro.style.backgroundColor = color;
-//   }))
-// })
-// buttonContain.appendChild(piker).classList.add('INPUT')
-// }
-// colorpiker()
 
 function erazbox()
 {
@@ -61,7 +44,7 @@ function erazbox()
     {
         boxs.forEach(box=>box.addEventListener('mouseover',()=>
         {   
-            box.style.background='white';
+            box.style.background='Transparent';
         }))
     })
     buttonContain.appendChild(eraz).classList.add('btn')
