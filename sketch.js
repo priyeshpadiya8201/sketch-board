@@ -1,6 +1,7 @@
 const contain = document.querySelector('.contain');
-const piker = document.createElement('INPUT');
-piker.setAttribute('type','color','onclick="colorpiker()"')
+var piker = document.createElement('INPUT');
+piker.setAttribute('type','color',);
+piker.setAttribute("onchange","colorpiker()")
 piker.className='copiker';
 const size = document.createElement('button');
 const eraz = document.createElement('button');
@@ -22,12 +23,12 @@ createdivs(24,24)
  function colorpiker()
 {
     const boxs = contain.querySelectorAll('.box')
-    piker.addEventListener('click' ,() => {
-        boxs.forEach(box => box.addEventListener('mouseover', () => {
-            let R = Math.floor(Math.random('copiker') * 380);
-            let G = Math.floor(Math.random('copiker') * 0);
-            let B = Math.floor(Math.random('copiker') * 0);
-            let RGB = `rgb(${R},${G},${B})`;
+    piker.addEventListener('click', () => {
+        boxs.forEach(box => box.addEventListener('mouseover', ()=> {
+             let R= Math.floor(Math.random(piker) * 255);
+             let G = Math.floor(Math.random(piker) * 0);
+             let B = Math.floor(Math.random(piker) * 0);
+            let RGB = `rgb(${R},${G},${B})`
             box.style.background = RGB;
         }))
     })
